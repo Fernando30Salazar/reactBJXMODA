@@ -1,0 +1,196 @@
+/* =========================================================
+   CEDICE — GRID DE SERVICIOS (única en esta marca)
+========================================================= */
+
+.services {
+  width: 100%;
+  padding: 100px 5%;
+  background: #f5f3ef;
+}
+
+.services__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.services__title h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: var(--color-text);
+  font-family: serif;
+}
+
+.services__title p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card__image {
+  width: 100%;
+  height: 530px;
+  overflow: hidden;
+}
+
+.service-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card__image img {
+  transform: scale(1.04);
+}
+
+.service-card__content {
+  padding: 35px;
+}
+
+.service-card__content span {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #8d8d8d;
+  font-family: serif;
+}
+
+.service-card__content h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 18px;
+  color: var(--color-text);
+}
+
+.service-card__content p {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: var(--color-text-soft);
+  margin-bottom: 35px;
+}
+
+.service-card__content a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.service-card__content a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: var(--color-black);
+  transition: width 0.3s ease;
+}
+
+.service-card__content a:hover {
+  opacity: 0.7;
+}
+
+.service-card__content a:hover::after {
+  width: 60%;
+}
+
+@media (max-width: 992px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-card__image {
+    height: 380px;
+  }
+  .services__title h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 70px 6%;
+  }
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .service-card__content {
+    padding: 28px;
+  }
+  .service-card__content span {
+    font-size: 2.5rem;
+  }
+  .service-card__content h2 {
+    font-size: 1.3rem;
+  }
+  .service-card__content p {
+    font-size: 0.95rem;
+  }
+  .service-card__image {
+    height: 340px;
+  }
+  .services__title {
+    margin-bottom: 50px;
+  }
+  .services__title h2 {
+    font-size: 2.5rem;
+  }
+  .services__title p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 60px 5%;
+  }
+  .service-card__image {
+    height: 300px;
+  }
+  .service-card__content {
+    padding: 24px;
+  }
+  .service-card__content span {
+    font-size: 2.2rem;
+  }
+  .service-card__content h2 {
+    font-size: 1.15rem;
+  }
+  .service-card__content p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .services__title h2 {
+    font-size: 2rem;
+  }
+  .services__title p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}

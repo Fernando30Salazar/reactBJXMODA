@@ -1,0 +1,24 @@
+/* =========================================================
+   PUNTO DE ENTRADA DE ESTILOS
+   Orden de carga: variables -> reset -> componentes -> páginas
+========================================================= */
+
+@import './variables.css';
+@import './globals.css';
+
+/* Componentes reutilizables */
+@import './components/navbar-footer.css';
+@import './components/carousel.css';
+@import './components/about-section.css';
+@import './components/video-grid.css';
+@import './components/registration-form.css';
+@import './components/ui.css';
+
+/* Estilos específicos por página/marca */
+@import './pages/bjxmoda.css';
+@import './pages/cedice.css';
+@import './pages/kiu-models.css';
+@import './pages/leon-fashion.css';
+@import './pages/admin.css';
+
+@import './responsive.css';

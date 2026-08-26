@@ -1,0 +1,366 @@
+/* =========================================================
+   REGISTRATION FORM — variante "standard"
+   (usada originalmente por CEDICE, Kiu Models y León FF)
+========================================================= */
+
+.reg-form-section {
+  width: 100%;
+  padding: 100px 5%;
+  background: #f3f3f3;
+}
+
+.reg-form-section__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.reg-form-section__title h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.reg-form-section__title p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+}
+
+.reg-form-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  background: var(--color-white);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.reg-form-grid__image {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.reg-form-grid__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 1;
+  display: block;
+}
+
+.reg-form-grid__content {
+  width: 100%;
+  padding: 55px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+}
+
+.reg-form-grid__content form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.reg-form__logo {
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.reg-form__logo h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-text);
+}
+
+/* =========================================================
+   REGISTRATION FORM — variante "featured" (BJXMODA)
+========================================================= */
+
+.reg-form-section--featured {
+  padding: 120px 8%;
+  background: var(--color-bg-alt);
+}
+
+.reg-form-section--featured .reg-form-section__intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.reg-form-section--featured .reg-form-section__intro h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 18px;
+  letter-spacing: -2px;
+}
+
+.reg-form-section--featured .reg-form-section__intro p {
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.reg-form-section--featured .reg-form-section__intro span {
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.reg-form-grid--featured {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  background: var(--color-white);
+  border-radius: 42px;
+  overflow: hidden;
+  box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.06);
+  min-height: 580px;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.reg-form-grid--featured:hover {
+  transform: scale(1.015);
+  box-shadow: 0px 25px 60px rgba(0, 0, 0, 0.12), 0px 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.reg-form-grid--featured .reg-form-grid__image {
+  height: 580px;
+}
+
+.reg-form-grid--featured .reg-form-grid__image img {
+  transition: transform 0.6s ease;
+}
+
+.reg-form-grid--featured:hover .reg-form-grid__image img {
+  transform: scale(1.03);
+}
+
+.reg-form-grid--featured .reg-form-grid__content {
+  padding: 55px 50px;
+  flex-direction: column;
+}
+
+.reg-form-grid--featured .reg-form__logo {
+  grid-column: unset;
+}
+
+.reg-form-grid--featured .reg-form__logo img {
+  width: 220px;
+  margin: 0 auto 45px auto;
+  display: block;
+}
+
+.reg-form-grid--featured form {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.reg-form-grid--featured .reg-form__submit {
+  grid-column: span 3;
+}
+
+/* =========================================================
+   CAMPOS (compartidos entre ambas variantes)
+========================================================= */
+
+.reg-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reg-form__group label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: var(--color-text);
+}
+
+.reg-form__group input,
+.reg-form__group select {
+  width: 100%;
+  height: 65px;
+  border-radius: 18px;
+  border: 1px solid #d9d9d9;
+  background: var(--color-bg-soft);
+  padding: 0 18px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition-base);
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+.reg-form__group input:focus,
+.reg-form__group select:focus {
+  border: 1px solid var(--color-black);
+  background: var(--color-white);
+}
+
+.reg-form__group input::placeholder {
+  color: #9a9a9a;
+}
+
+.reg-form__group--error input,
+.reg-form__group--error select {
+  border-color: var(--color-error);
+}
+
+.reg-form__error-text {
+  font-size: 0.8rem;
+  color: var(--color-error);
+}
+
+.reg-form__submit {
+  grid-column: span 2;
+  width: 260px;
+  height: 55px;
+  border: none;
+  border-radius: 50px;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  justify-self: start;
+}
+
+.reg-form__submit:hover:not(:disabled) {
+  background: #1d1d1d;
+  transform: translateY(-2px);
+}
+
+.reg-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reg-form__feedback {
+  grid-column: 1 / -1;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.reg-form__feedback--success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.reg-form__feedback--error {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+@media (max-width: 1100px) {
+  .reg-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .reg-form-grid__image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .reg-form-grid--featured {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .reg-form-grid--featured:hover {
+    transform: scale(1);
+  }
+  .reg-form-grid--featured .reg-form-grid__image {
+    height: 360px;
+  }
+  .reg-form-grid--featured .reg-form-grid__content {
+    padding: 45px 25px;
+  }
+  .reg-form-grid--featured .reg-form__logo img {
+    width: 190px;
+  }
+  .reg-form-grid--featured form {
+    grid-template-columns: 1fr;
+  }
+  .reg-form-grid--featured .reg-form__submit {
+    grid-column: span 1;
+  }
+  .reg-form-section--featured .reg-form-section__intro h3 {
+    font-size: 2.3rem;
+  }
+  .reg-form-section--featured .reg-form-section__intro p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reg-form-section {
+    padding: 70px 5%;
+  }
+  .reg-form-section__title {
+    margin-bottom: 45px;
+  }
+  .reg-form-section__title h2 {
+    font-size: 2.3rem;
+  }
+  .reg-form-section__title p {
+    font-size: 0.95rem;
+  }
+  .reg-form-grid__content {
+    padding: 45px 25px;
+  }
+  .reg-form-grid__content form {
+    grid-template-columns: 1fr;
+  }
+  .reg-form__logo {
+    grid-column: span 1;
+  }
+  .reg-form__submit {
+    grid-column: span 1;
+    width: 100%;
+  }
+  .reg-form-grid__image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-form-section__title h2 {
+    font-size: 1.9rem;
+  }
+  .reg-form-section__title p {
+    line-height: 1.7;
+  }
+  .reg-form-grid__content {
+    padding: 35px 18px;
+  }
+  .reg-form__logo h3 {
+    font-size: 2rem;
+  }
+  .reg-form__group input,
+  .reg-form__group select {
+    height: 60px;
+  }
+  .reg-form__submit {
+    height: 55px;
+  }
+}

@@ -1,0 +1,191 @@
+/* =========================================================
+   VIDEO GRID (compartido por BJXMODA y León Fashion Film)
+========================================================= */
+
+.video-section {
+  padding: 100px 8%;
+  background-color: var(--color-bg-soft);
+}
+
+.video-section__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 70px auto;
+}
+
+.video-section__header h2 {
+  font-size: 55px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--color-black);
+}
+
+/* Variante tipográfica serif (usada por León Fashion Film) */
+.video-section__header--serif h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: serif;
+  text-transform: none;
+  margin-bottom: 25px;
+  color: var(--color-text);
+}
+
+.video-section__header p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 35px;
+}
+
+.video-section__header--serif p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.video-section__header a {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: var(--transition-base);
+}
+
+.video-section__header a:hover {
+  transform: translateY(-4px);
+  background-color: #222;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.video-card {
+  background-color: var(--color-white);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: var(--transition-slow);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.video-card__image {
+  overflow: hidden;
+  height: 320px;
+  position: relative;
+}
+
+.video-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+  display: block;
+}
+
+.video-card:hover .video-card__image img {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+.video-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.video-card:hover .video-card__image::after {
+  opacity: 1;
+}
+
+.video-card__content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.video-card__tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 8px 16px;
+  margin-bottom: 18px;
+  background-color: #f1f1f1;
+  color: var(--color-text);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.video-card__content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: var(--color-black);
+}
+
+.video-card__content p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 25px;
+}
+
+.video-card__content a {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 25px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--transition-base);
+  margin-top: auto;
+}
+
+.video-card__content a:hover {
+  background-color: #222;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1100px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    padding: 80px 5%;
+  }
+  .video-section__header h2 {
+    font-size: 38px;
+  }
+  .video-section__header p {
+    font-size: 18px;
+  }
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+  .video-card__image {
+    height: 280px;
+  }
+}

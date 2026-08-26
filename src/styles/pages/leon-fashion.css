@@ -1,0 +1,213 @@
+/* =========================================================
+   LEÓN FASHION FILM — GALERÍA DE EDICIONES (única en esta marca)
+========================================================= */
+
+.editions {
+  width: 100%;
+  padding: 120px 6%;
+  background: #f5f3ef;
+}
+
+.editions__title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.editions__title h2 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.05;
+  color: var(--color-text);
+  font-family: serif;
+  margin-bottom: 30px;
+}
+
+.editions__title p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--color-text-muted);
+}
+
+.edition-row {
+  margin-bottom: 90px;
+}
+
+.edition-row::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #c8c8c8;
+  margin: 0 auto 30px auto;
+}
+
+.edition-row h3 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: var(--color-text);
+  font-family: serif;
+}
+
+.edition-row__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.edition-row__grid img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
+  filter: saturate(0.95);
+  cursor: pointer;
+}
+
+.edition-row__grid img:hover {
+  transform: translateY(-10px) scale(1.03);
+  filter: saturate(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18), 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================
+   PANEL FILMFREEWAY (única en esta marca)
+========================================================= */
+
+.filmfreeway-panel {
+  padding: 100px 6%;
+  background: var(--color-white);
+}
+
+.filmfreeway-panel__content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 70px;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  background: var(--color-white);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.filmfreeway-panel__content span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+.filmfreeway-panel__content h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: serif;
+  margin-bottom: 25px;
+  color: var(--color-text);
+}
+
+.filmfreeway-panel__content p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+}
+
+.filmfreeway-panel__content a {
+  display: inline-block;
+  padding: 16px 35px;
+  border: 1px solid var(--color-text);
+  border-radius: 50px;
+  text-decoration: none;
+  color: var(--color-text);
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  transition: 0.35s ease;
+}
+
+.filmfreeway-panel__content a:hover {
+  background: var(--color-text);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .editions {
+    padding: 100px 6%;
+  }
+  .edition-row__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .edition-row__grid img {
+    height: 260px;
+  }
+  .editions__title h2 {
+    font-size: 4rem;
+  }
+  .edition-row h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .editions {
+    padding: 80px 6%;
+  }
+  .editions__title {
+    margin-bottom: 70px;
+  }
+  .editions__title h2 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+  }
+  .editions__title p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .edition-row__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .edition-row__grid img {
+    height: 340px;
+    border-radius: 20px;
+  }
+  .edition-row {
+    margin-bottom: 70px;
+  }
+  .edition-row h3 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editions {
+    padding: 60px 5%;
+  }
+  .editions__title h2 {
+    font-size: 2.2rem;
+  }
+  .editions__title p {
+    font-size: 0.9rem;
+  }
+  .edition-row__grid img {
+    height: 300px;
+  }
+  .edition-row h3 {
+    font-size: 1rem;
+  }
+}
