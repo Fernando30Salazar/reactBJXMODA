@@ -405,7 +405,7 @@ export const sites = {
     seo: {
       title: 'Kiu Models | Agencia de talento en Guanajuato',
       description:
-        'Kiu Models es la agencia y productora de talento de Guanajuato, con más de 50 talentos en la industria de la moda, el audiovisual y lo creativo.',
+        'Kiu Models es la agencia y productora de talento de Guanajuato, con más de 100 talentos en la industria de la moda, el audiovisual y lo creativo.',
     },
   },
 
