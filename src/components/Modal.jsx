@@ -1,5 +1,5 @@
 /**
- * Modal genérico reutilizable.
+ * Modal  reutilizable.
  * @param {Object} props
  * @param {boolean} props.open
  * @param {() => void} props.onClose
